@@ -1,0 +1,8 @@
+FROM python:3
+
+COPY ./requirements.txt ./requirements.txt
+RUN pip install -r requirements.txt
+
+WORKDIR /mack-streaming
+
+ENV GOOGLE_APPLICATION_CREDENTIALS="/mack-streaming/gcp_key.json"
