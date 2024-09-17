@@ -162,4 +162,4 @@ cython_debug/
 #.idea/
 
 # GCP Service Account Credentials
-cloud-714-*.json
+gcp_key.json
