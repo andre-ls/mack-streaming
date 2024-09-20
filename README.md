@@ -22,3 +22,19 @@ Figura 1 - Arquitetura Proposta
 
 ## Manual de Utilização
 
+Para reproduzir este projeto, é necessário cumprir alguns requisitos e realizar alguns passos.
+
+### Requisitos
+- Possuir uma Conta no Google Cloud
+- Criar um Projeto no Google Cloud
+- Criar um tópico no PubSub com uma assinatura integrada ao BigQuery
+- Criar uma Conta de Serviço com acesso ao PubSub, e gerar uma chave de acesso em formato JSON.
+
+## Passos
+- Clonar este repositório.
+- Copiar o conteúdo da chave de acesso da Conta de Serviço para o arquivo /auth/gcp_key.json.
+- Construir a imagem docker do projeto executando o comando a seguir no diretório raiz:
+    ```
+    docker build -t mack-streaming .
+    ```
+- 
