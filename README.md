@@ -30,11 +30,18 @@ Para reproduzir este projeto, é necessário cumprir alguns requisitos e realiza
 - Criar um tópico no PubSub com uma assinatura integrada ao BigQuery
 - Criar uma Conta de Serviço com acesso ao PubSub, e gerar uma chave de acesso em formato JSON.
 
-## Passos
+### Passos
 - Clonar este repositório.
 - Copiar o conteúdo da chave de acesso da Conta de Serviço para o arquivo /auth/gcp_key.json.
 - Construir a imagem docker do projeto executando o comando a seguir no diretório raiz:
     ```
     docker build -t mack-streaming .
     ```
-- 
+- Executar a Imagem Docker através do comando:
+    ```
+    docker run mack-streaming --google_project <PROJETO_GOOGLE> --pubsub_topic <TOPICO_PUBSUB> --n_messages <NUMERO_MENSAGENS>
+    ```
+    - Substituindo:
+      - `<PROJETO_GOOGLE>` por o nome do Projeto Google Cloud;
+      - `<TOPICO_PUBSUB>` por o nome do tópico do PubSub;
+      - `<NUMERO_MENSAGENS>` por o número de mensagens a ser enviado ao tópico (10 por padrão);
