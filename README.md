@@ -12,7 +12,7 @@ Os dados utilizados contém os seguintes tipos de informação:
 ## Arquitetura Proposta
 Para atender os requisitos apresentados, foi proposta uma arquitetura em nuvem utilizando como sistema central o PubSub, serviço de streaming de mensagens oferecido pelo Google Cloud. O resultado geral da arquitetura, bem como uma breve explicação de cada elemento, podem ser encontrados abaixo.
 
-![Architecture](/images/architecture.png)
+![Architecture](/images/arquitetura.png)
 Figura 1 - Arquitetura Proposta
 
 - Para simular a geração de eventos em tempo real, criamos uma estrutura local com um script Python que lê os dados originais fornecidos pela fonte, amostra uma quantidade de eventos determinada pelo usuário, convertendo-os para um formato JSON e realizando o envio ao PubSub através de um SDK do Google.
