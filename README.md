@@ -8,6 +8,12 @@ Este repositório contém o trabalho final da Disciplina de Data Collection & St
 A proposta principal deste trabalho é simples: criar uma arquitetura de streaming capaz de transmitir eventos em tempo real de uma determinada fonte até um destino apropriado.
 Para tornar esta proposta um pouco mais próxima de um cenário real, utilizamos como fonte de dados um conjunto de dados público sobre viagens de Taxi realizadas na cidade de Nova York durante o mês de Janeiro de 2024. Com isso, o objetivo do trabalho torna-se criar uma arquitetura capaz de transmitir dados sobre os eventos de corrida em tempo real para uma estrutura de armazenamento adequada para o consumo e análise de dados com uma alta taxa de atualização.
 Os dados utilizados contém os seguintes tipos de informação:
+- VendorID: Usuário do Sistema.
+- Horários: Datas/horas de embarque e desembarque.
+- Passageiros e Distância: Contagem de passageiros e distância percorrida.
+- Localizações: Zonas TLC de embarque e desembarque.
+- Tarifas e Pagamento: Código de tarifa e método de pagamento.
+- Taxas: MTA, pedágios, gorjetas, melhoria, congestionamento e taxa de aeroporto.
 
 ## Arquitetura Proposta
 Para atender os requisitos apresentados, foi proposta uma arquitetura em nuvem utilizando como sistema central o PubSub, serviço de streaming de mensagens oferecido pelo Google Cloud. O resultado geral da arquitetura, bem como uma breve explicação de cada elemento, podem ser encontrados abaixo.
